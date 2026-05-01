@@ -73,15 +73,17 @@ function getAiStageLabel(level: number): string {
 }
 
 function getAiSpriteSrc(level: number): string {
+  const assetBase = import.meta.env.BASE_URL;
+
   if (level >= 5) {
-    return '/assets/ai-companion-overclock.png';
+    return `${assetBase}assets/ai-companion-overclock.png`;
   }
 
   if (level >= 3) {
-    return '/assets/ai-companion-charged.png';
+    return `${assetBase}assets/ai-companion-charged.png`;
   }
 
-  return '/assets/ai-companion-newbie.png';
+  return `${assetBase}assets/ai-companion-newbie.png`;
 }
 
 function getUpgradeDelta(upgrade: Upgrade, run: RunState): string {

@@ -120,7 +120,7 @@ describe('Typing Rogue UI', () => {
 
     expect(companion).toHaveClass('ai-newbie');
     expect(companion).toHaveAttribute('data-stage', '응애 모델');
-    expect(sprite).toHaveAttribute('src', '/assets/ai-companion-newbie.png');
+    expect(sprite?.getAttribute('src')).toContain('assets/ai-companion-newbie.png');
 
     for (let index = 0; index < 4; index += 1) {
       const prompt = screen.getByTestId('target-prompt').textContent ?? '';
@@ -129,7 +129,7 @@ describe('Typing Rogue UI', () => {
 
     expect(companion).toHaveClass('ai-charged');
     expect(companion).toHaveAttribute('data-stage', '각성 모델');
-    expect(sprite).toHaveAttribute('src', '/assets/ai-companion-charged.png');
+    expect(sprite?.getAttribute('src')).toContain('assets/ai-companion-charged.png');
   });
 
   it('does not convert typed English key sequences into Korean syllables', () => {
