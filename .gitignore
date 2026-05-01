@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+*.tsbuildinfo
+node_modules/.tmp/
+vite.config.js
+vite.config.d.ts
